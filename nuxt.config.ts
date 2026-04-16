@@ -2,7 +2,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-04-01',
 
   modules: [
-    '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@nuxt/icon',
@@ -47,10 +46,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       fallbackLocale: 'es',
     },
-  },
-
-  content: {
-    // Nuxt Content v3 defaults are fine
   },
 
   css: ['~/assets/css/main.css'],
