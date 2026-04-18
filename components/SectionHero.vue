@@ -75,16 +75,16 @@ const { locale } = useI18n()
 const stats = computed(() =>
   locale.value === 'es'
     ? [
-        { value: '80%', label: 'Diferenciación NE' },
-        { value: 'FGFR1×13', label: 'Amplificación driver' },
-        { value: '5+', label: 'Oncólogos implicados' },
-        { value: 'N-of-1', label: 'Objetivo: ensayo' },
+        { value: '2024', label: 'Año del diagnóstico' },
+        { value: '5+', label: 'Especialistas internacionales en su caso' },
+        { value: '0', label: 'Terapias aprobadas para su perfil molecular' },
+        { value: '1', label: 'Caso que la sanidad pública no contempla' },
       ]
     : [
-        { value: '80%', label: 'NE Differentiation' },
-        { value: 'FGFR1×13', label: 'Driver amplification' },
-        { value: '5+', label: 'Oncologists involved' },
-        { value: 'N-of-1', label: 'Goal: trial' },
+        { value: '2024', label: 'Year of diagnosis' },
+        { value: '5+', label: 'International specialists on her case' },
+        { value: '0', label: 'Approved therapies for her molecular profile' },
+        { value: '1', label: 'Case that public healthcare doesn\'t address' },
       ]
 )
 </script>

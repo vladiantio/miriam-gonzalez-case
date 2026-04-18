@@ -72,9 +72,7 @@ const timelineEntries = computed(() =>
           date: 'Abril 2026 — Semana 1',
           title: 'Se forma el equipo y empieza la búsqueda',
           description: 'Miriam comienza a investigar su caso con IA. Se forma un equipo multidisciplinar espontáneo. Contacto con oncólogo molecular en Suiza. Primer hilo en X sobre oncología de precisión y uso de IA.',
-          highlight: true,
-          link: 'https://x.com/miriamgonp',
-          linkLabel: 'Ver en X',
+          highlight: false,
         },
         {
           date: '8-9 Abril 2026',
@@ -85,7 +83,7 @@ const timelineEntries = computed(() =>
         {
           date: '10 Abril 2026',
           title: 'Avalancha de puertas abiertas',
-          description: 'VHIO acepta evaluar el caso. El jefe de onco-radioterapia de la Arrixaca lleva el caso a comité tumoral. Oncólogo peruano valida el enfoque con publicación en LinkedIn. Biopsia líquida Guardant360 realizada. GoFundMe activado. Oncóloga de Houston se ofrece a investigar.',
+          description: 'Se activan múltiples frentes simultáneamente: especialistas internacionales responden y el caso comienza a ganar tracción en la red de oncología de precisión.',
           highlight: true,
         },
         {
@@ -124,9 +122,7 @@ const timelineEntries = computed(() =>
           date: 'April 2026 — Week 1',
           title: 'The team forms and the search begins',
           description: 'Miriam starts investigating her case with AI. A spontaneous multidisciplinary team forms. Contact with molecular oncologist in Switzerland. First X thread on precision oncology and AI use.',
-          highlight: true,
-          link: 'https://x.com/miriamgonp',
-          linkLabel: 'See on X',
+          highlight: false
         },
         {
           date: 'April 8-9, 2026',
@@ -137,7 +133,7 @@ const timelineEntries = computed(() =>
         {
           date: 'April 10, 2026',
           title: 'Avalanche of open doors',
-          description: 'VHIO agrees to evaluate the case. Head of radiation oncology at Arrixaca takes the case to tumor board. Peruvian oncologist validates approach with LinkedIn publication. Guardant360 liquid biopsy performed. GoFundMe activated. Houston oncologist offers to investigate.',
+          description: 'Multiple fronts activate simultaneously: international specialists respond and the case begins gaining traction across the precision oncology network.',
           highlight: true,
         },
         {

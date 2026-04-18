@@ -13,14 +13,14 @@
         <MolecularProfile class="mb-12" />
 
         <!-- The core problem -->
-        <div class="card-base mb-8 border-l-4 border-l-gold-400">
+        <section class="card-base mb-8 border-l-4 border-l-gold-400">
           <h2 class="font-display font-semibold text-ink-900 text-lg mb-3">
             {{ locale === 'es' ? '¿Por qué este tumor no encaja en las guías?' : 'Why doesn\'t this tumor fit the guidelines?' }}
           </h2>
           <p class="text-sm text-ink-700 leading-relaxed mb-4">
             {{ locale === 'es'
-              ? 'Formalmente es un cáncer de mama luminal (HR+), pero con un ~80% de diferenciación neuroendocrina y una amplificación FGFR1 ×13 que actúa como driver biológico dominante. Los oncólogos de mama tienden a tratarlo como un luminal estándar, minimizando el componente neuroendocrino. La literatura y el sentido clínico sugieren que este subtipo híbrido (BC-NED) tiene peor pronóstico y puede requerir estrategias completamente diferentes.'
-              : 'Formally it is a luminal breast cancer (HR+), but with ~80% neuroendocrine differentiation and an FGFR1 ×13 amplification acting as the dominant biological driver. Breast oncologists tend to treat it as standard luminal, minimizing the neuroendocrine component. Literature and clinical reasoning suggest this hybrid subtype (BC-NED) has worse prognosis and may require completely different strategies.'
+              ? 'Formalmente es un cáncer de mama luminal (HR+), pero con un ~80% de diferenciación neuroendocrina y una amplificación FGFR1 ×13. Las guías recomiendan tratarlo como un luminal estándar, minimizando el componente neuroendocrino. La literatura y el sentido clínico sugieren que este subtipo híbrido (BC-NED) tiene peor pronóstico y puede requerir estrategias completamente diferentes.'
+              : 'Formally it is a luminal breast cancer (HR+), but with ~80% neuroendocrine differentiation and an FGFR1 ×13. Guidelines tend to recommend treating it as standard luminal, minimizing the neuroendocrine component. Literature and clinical reasoning suggest this hybrid subtype (BC-NED) has worse prognosis and may require completely different strategies.'
             }}
           </p>
           <p class="text-sm text-ink-700 leading-relaxed font-medium">
@@ -29,7 +29,7 @@
               : 'The thesis: biology, not the organ of origin, should guide treatment.'
             }}
           </p>
-        </div>
+        </section>
 
         <!-- Treatment history -->
         <h2 class="heading-display text-2xl text-ink-950 mb-6 mt-14">
@@ -78,65 +78,70 @@
           </div>
         </div>
 
+        <section v-if="false">
         <!-- Proposed panel -->
-        <h2 id="panel-title" class="heading-display text-2xl text-ink-950 mb-6">
-          {{ locale === 'es' ? 'Panel propuesto para la rebiopsia' : 'Proposed re-biopsy panel' }}
-        </h2>
-        <div class="card-base overflow-hidden mb-14">
-          <div class="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
-            <table class="w-full text-sm" aria-labelledby="panel-title">
-              <caption class="sr-only">{{ locale === 'es' ? 'Panel de rebiopsia propuesto: componentes, métodos, dianas e implicación clínica' : 'Proposed re-biopsy panel: components, methods, targets and clinical implication' }}</caption>
-              <thead>
-                <tr class="border-b-2 border-ink-200">
-                  <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs whitespace-nowrap">
-                    {{ locale === 'es' ? 'Componente' : 'Component' }}
-                  </th>
-                  <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs whitespace-nowrap">
-                    {{ locale === 'es' ? 'Método' : 'Method' }}
-                  </th>
-                  <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs">
-                    {{ locale === 'es' ? 'Dianas' : 'Targets' }}
-                  </th>
-                  <th scope="col" class="text-left py-2 font-semibold text-ink-800 text-xs">
-                    {{ locale === 'es' ? 'Implicación' : 'Implication' }}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="(row, i) in panelRows"
-                  :key="i"
-                  class="border-b border-ink-100 last:border-0"
-                  :class="i % 2 === 0 ? 'bg-ocean-50/20' : ''"
-                >
-                  <td class="py-2.5 pr-3 text-xs font-medium text-ink-900 whitespace-nowrap">{{ row.component }}</td>
-                  <td class="py-2.5 pr-3 text-xs text-ink-600 whitespace-nowrap">{{ row.method }}</td>
-                  <td class="py-2.5 pr-3 text-xs text-ink-600">{{ row.targets }}</td>
-                  <td class="py-2.5 text-xs text-ink-600">{{ row.implication }}</td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 id="panel-title" class="heading-display text-2xl text-ink-950 mb-6">
+            {{ locale === 'es' ? 'Panel propuesto para la rebiopsia' : 'Proposed re-biopsy panel' }}
+          </h2>
+          <div class="card-base overflow-hidden mb-14">
+            <div class="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
+              <table class="w-full text-sm" aria-labelledby="panel-title">
+                <caption class="sr-only">{{ locale === 'es' ? 'Panel de rebiopsia propuesto: componentes, métodos, dianas e implicación clínica' : 'Proposed re-biopsy panel: components, methods, targets and clinical implication' }}</caption>
+                <thead>
+                  <tr class="border-b-2 border-ink-200">
+                    <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs whitespace-nowrap">
+                      {{ locale === 'es' ? 'Componente' : 'Component' }}
+                    </th>
+                    <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs whitespace-nowrap">
+                      {{ locale === 'es' ? 'Método' : 'Method' }}
+                    </th>
+                    <th scope="col" class="text-left py-2 pr-3 font-semibold text-ink-800 text-xs">
+                      {{ locale === 'es' ? 'Dianas' : 'Targets' }}
+                    </th>
+                    <th scope="col" class="text-left py-2 font-semibold text-ink-800 text-xs">
+                      {{ locale === 'es' ? 'Implicación' : 'Implication' }}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(row, i) in panelRows"
+                    :key="i"
+                    class="border-b border-ink-100 last:border-0"
+                    :class="i % 2 === 0 ? 'bg-ocean-50/20' : ''"
+                  >
+                    <td class="py-2.5 pr-3 text-xs font-medium text-ink-900 whitespace-nowrap">{{ row.component }}</td>
+                    <td class="py-2.5 pr-3 text-xs text-ink-600 whitespace-nowrap">{{ row.method }}</td>
+                    <td class="py-2.5 pr-3 text-xs text-ink-600">{{ row.targets }}</td>
+                    <td class="py-2.5 text-xs text-ink-600">{{ row.implication }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <!-- Clinical trials -->
-        <h2 class="heading-display text-2xl text-ink-950 mb-6">
-          {{ locale === 'es' ? 'Ensayos clínicos bajo consideración' : 'Clinical trials under consideration' }}
-        </h2>
-        <div class="grid sm:grid-cols-2 gap-4 mb-14">
-          <a
-            v-for="trial in trials"
-            :key="trial.id"
-            :href="trial.link"
-            target="_blank"
-            rel="noopener"
-            class="card-base hover:shadow-md transition-shadow group"
-          >
-            <span class="font-mono text-2xs text-ocean-600 font-medium">{{ trial.id }}</span>
-            <h4 class="font-semibold text-ink-900 text-sm mt-1 group-hover:text-ocean-700 transition-colors">{{ trial.name }}</h4>
-            <p class="text-xs text-ink-600 mt-1.5 leading-relaxed">{{ trial.desc }}</p>
-          </a>
-        </div>
+        <section class="mb-10">
+          <!-- Clinical trials -->
+          <h2 class="heading-display text-2xl text-ink-950 mb-6">
+            {{ locale === 'es' ? 'Ensayos clínicos bajo consideración' : 'Clinical trials under consideration' }}
+          </h2>
+          <p class="py-1">{{  locale === 'es' ? 'Aquí aparecerán las propuestas de ensayo que encajan más con el perfil de Miriam próximamante.' : "Trials that can help Miriam's case will be available soon." }}</p>
+          <div v-if="false" class="grid sm:grid-cols-2 gap-4 mb-14">
+            <a
+              v-for="trial in trials"
+              :key="trial.id"
+              :href="trial.link"
+              target="_blank"
+              rel="noopener"
+              class="card-base hover:shadow-md transition-shadow group"
+            >
+              <span class="font-mono text-2xs text-ocean-600 font-medium">{{ trial.id }}</span>
+              <h4 class="font-semibold text-ink-900 text-sm mt-1 group-hover:text-ocean-700 transition-colors">{{ trial.name }}</h4>
+              <p class="text-xs text-ink-600 mt-1.5 leading-relaxed">{{ trial.desc }}</p>
+            </a>
+          </div>
+        </section>
 
         <!-- N-of-1 goal -->
         <div class="card-base bg-ink-950 text-white border-0">

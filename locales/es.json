@@ -21,10 +21,10 @@
     "main_content_label": "Contenido principal"
   },
   "hero": {
-    "tagline": "BC-NED + FGFR1 × 13",
-    "title": "Cuando las guías no bastan, la biología lidera.",
-    "subtitle": "Cáncer de mama metastásico con diferenciación neuroendocrina y amplificación FGFR1. Una paciente, un equipo internacional, e inteligencia artificial buscando la terapia que la oncología estándar no contempla.",
-    "cta_donate": "Apoyar la causa",
+    "tagline": "Una paciente. Un tumor único. Una oportunidad real.",
+    "title": "Miriam tiene cáncer de mama metastásico y la medicina estándar no tiene respuestas para su caso.",
+    "subtitle": "Su tumor tiene características moleculares tan inusuales que los protocolos habituales no aplican. Un equipo internacional de oncólogos busca el tratamiento correcto, pero hay pruebas y recursos que la sanidad pública no cubre. Tu apoyo puede hacer la diferencia.",
+    "cta_donate": "Apoyar a Miriam",
     "cta_science": "Ver la ciencia",
     "section_label": "Presentación del caso"
   },
