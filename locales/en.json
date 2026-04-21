@@ -23,7 +23,7 @@
   "hero": {
     "tagline": "One patient. A unique tumor. A real chance.",
     "title": "Miriam has metastatic breast cancer and standard medicine has no answers for her case.",
-    "subtitle": "Her tumor has such unusual molecular features that standard protocols don't apply. An international team of oncologists is searching for the right treatment — but there are tests and resources that public healthcare doesn't cover. Your support can make the difference.",
+    "subtitle": "Her tumor doesn't respond to any standard treatment. Finding the right one requires tests that public healthcare won't fund — and time cannot wait.",
     "cta_donate": "Support Miriam",
     "cta_science": "See the science",
     "section_label": "Case overview"
@@ -41,7 +41,7 @@
     "why_title": "Why isn't this covered by public healthcare?",
     "why_text": "Current clinical guidelines classify this tumor as \"standard HR+\", but its real biology — with 80% neuroendocrine differentiation and FGFR1 amplification — requires precision tests that are not included in the protocol. Without these tests, Miriam receives the same treatment as a patient with a completely different tumor.",
     "transparency_title": "Full transparency",
-    "transparency_text": "Every expense is publicly documented. Quotes are requested from recognized centers (NMI-TT Germany, MD Anderson Madrid, VHIO Barcelona) and shared with the community."
+    "transparency_text": "Every expense is publicly documented. We request quotes from international reference centers and share them with the community."
   },
   "science": {
     "title": "The science behind the case",
