@@ -22,7 +22,7 @@
     </section>
 
     <!-- In the press -->
-    <section class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
+    <section v-if="false" class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
       <div class="section-container">
         <h2 class="heading-display text-2xl sm:text-3xl text-ink-950 mb-10 text-center">
           {{ locale === 'es' ? 'En los medios' : 'In the press' }}
