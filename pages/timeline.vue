@@ -47,7 +47,7 @@ const timelineEntries = computed(() =>
         {
           date: '2021,Antecedentes',
           title: 'Un primer aviso que quedó sin respuesta',
-          description: 'Miriam acude a urgencias por un sangrado. Le realizan una ecografía. El resultado es normal. Y ahí se queda la cosa.',
+          description: 'Miriam acude a urgencias por un sangrado en la mama. Le realizan una ecografía. El resultado es normal. Y ahí se queda la cosa.',
           highlight: false,
         },
         {
@@ -59,7 +59,7 @@ const timelineEntries = computed(() =>
         {
           date: '11 de enero de 2024,Diagnóstico',
           title: 'El resultado llega por email',
-          description: 'El informe de la resonancia llega por email, un jueves por la mañana. La conclusión: "probable metástasis vertebrales". Sin médico al lado. Sin contexto. Solo una pantalla. Ese mismo día, Miriam ingresa por urgencias. El martes siguiente tiene el diagnóstico completo: carcinoma de mama con diferenciación neuroendocrina estadio IV, con metástasis óseas múltiples y compresión medular en L3. Tiene 32 años. Ese mismo martes empieza la radioterapia sobre la vértebra afectada.',
+          description: 'El informe de la resonancia llega por email, un jueves por la mañana. La conclusión: "probable metástasis vertebrales". Sin médico al lado. Sin contexto. Solo una pantalla. Ese mismo día, Miriam ingresa por urgencias. El martes siguiente tiene el diagnóstico completo: carcinoma de mama con diferenciación neuroendocrina estadio IV, con metástasis óseas múltiples y compresión medular en L3. Tiene 32 años. Ese mismo martes inicia radioterapia sobre las vértebras afectadas.',
           highlight: true,
         },
         {
@@ -78,19 +78,19 @@ const timelineEntries = computed(() =>
         {
           date: 'Julio de 2024,DIPCAN',
           title: 'El tumor revela su identidad molecular',
-          description: 'Miriam participa en el estudio DIPCAN, que permite realizar un análisis genómico avanzado (TSO500) sobre tejido tumoral. Los resultados cambian la comprensión del caso: diferenciación neuroendocrina del ~80%, amplificación FGFR1 ×13 y otros marcadores del cluster 11q13. Por primera vez, el tumor tiene un perfil molecular definido.',
+          description: 'Miriam participa en el estudio DIPCAN de MD Anderson Madrid, que permite realizar un análisis genómico avanzado (TSO500) sobre tejido tumoral. Los resultados cambian la comprensión del caso: diferenciación neuroendocrina del ~80%, amplificación FGFR1 ×13 y otros marcadores del cluster 11q13. Por primera vez, el tumor tiene un perfil molecular definido.',
           highlight: true,
         },
         {
           date: 'Enero de 2025,Segunda línea',
           title: 'Tratamiento: Fulvestrant + Abemaciclib',
-          description: 'Tras confirmar progresión en PET-TAC, se inicia segunda línea con fulvestrant y abemaciclib.',
+          description: 'Tras confirmar progresión en PET-TAC, se pasa a segunda línea: se sustituye letrozol por fulvestrant y ribociclib por abemaciclib. Zoladex se mantiene.',
           highlight: false,
         },
         {
           date: 'Marzo de 2026,Progresión',
           title: 'Segunda línea suspendida por toxicidad grave',
-          description: 'El abemaciclib se suspende por hepatotoxicidad grave (DILI G2-3) y progresión ósea confirmada en PET. Hay preocupación estructural en fémur derecho y pelvis. ECOG 0: Miriam mantiene plena capacidad funcional, trabaja, se mueve y hace vida normal a pesar de todo.',
+          description: 'Progresión ósea confirmada en PET-TAC con nuevos focos. El abemaciclib se suspende por progresión ósea y toxicidad hepática (DILI G2-3). ECOG 0: Miriam mantiene plena capacidad funcional, trabaja, se mueve y hace vida normal a pesar de todo.',
           highlight: false,
         },
         {
@@ -109,12 +109,20 @@ const timelineEntries = computed(() =>
           link: 'https://x.com/javilop/status/2041905341059973294',
           linkLabel: 'Ver hilo de documentación →',
         },
+        {
+          date: 'Abril 2026,DIVULGACIÓN',
+          title: 'Ponencia en Codemotion Madrid',
+          description: 'Míriam sube al escenario de Codemotion Madrid para hablar de cómo la IA está ayudando a avanzar su caso. Primer acto público de divulgación del proyecto y regreso al ecosistema tech tras dos años.',
+          highlight: true,
+          link: 'https://x.com/miriamgonp/status/2046266823209890162',
+          linkLabel: 'Ver el hilo en Twitter →',
+        },
       ]
     : [
         {
           date: '2021,Background',
           title: 'A first warning that went unanswered',
-          description: 'Miriam goes to the emergency room for bleeding. An ultrasound is performed. The result is normal. And that\'s where it ends.',
+          description: 'Miriam goes to the emergency room due to bleeding in the breast. An ultrasound is performed. The result is normal. And that\'s where it ends.',
           highlight: false,
         },
         {
@@ -126,7 +134,7 @@ const timelineEntries = computed(() =>
         {
           date: 'January 11, 2024,Diagnosis',
           title: 'The result arrives by email',
-          description: 'The MRI report arrives by email on a Thursday morning. The conclusion: "probable vertebral metastases." No doctor present. No context. Just a screen. That same day, Miriam is admitted to the emergency room. The following Tuesday she receives the full diagnosis: stage IV breast cancer with neuroendocrine differentiation, multiple bone metastases, and spinal cord compression at L3. She is 32 years old. That same Tuesday, radiotherapy begins on the affected vertebra.',
+          description: 'The MRI report arrives by email on a Thursday morning. The conclusion: "probable vertebral metastases." No doctor present. No context. Just a screen. That same day, Miriam is admitted to the emergency room. The following Tuesday she receives the full diagnosis: stage IV breast cancer with neuroendocrine differentiation, multiple bone metastases, and spinal cord compression at L3. She is 32 years old. That same Tuesday, radiotherapy begins on the affected vertebrae.',
           highlight: true,
         },
         {
@@ -145,19 +153,19 @@ const timelineEntries = computed(() =>
         {
           date: 'July 2024,DIPCAN',
           title: 'The tumor reveals its molecular identity',
-          description: 'Miriam participates in the DIPCAN study, enabling advanced genomic analysis (TSO500) on tumor tissue. The results change the understanding of the case: ~80% neuroendocrine differentiation, FGFR1 ×13 amplification, and other markers in the 11q13 cluster. For the first time, the tumor has a defined molecular profile.',
+          description: 'Miriam participates in the DIPCAN study at MD Anderson Madrid, enabling advanced genomic analysis (TSO500) on tumor tissue. The results change the understanding of the case: ~80% neuroendocrine differentiation, FGFR1 ×13 amplification, and other markers in the 11q13 cluster. For the first time, the tumor has a defined molecular profile.',
           highlight: true,
         },
         {
           date: 'January 2025,Second line',
           title: 'Treatment: Fulvestrant + Abemaciclib',
-          description: 'Following confirmed progression on PET-CT, second-line treatment begins with fulvestrant and abemaciclib.',
+          description: 'Following confirmed progression on PET-CT, second-line treatment begins: letrozole is switched to fulvestrant and ribociclib to abemaciclib. Zoladex continued.',
           highlight: false,
         },
         {
           date: 'March 2026,Progression',
           title: 'Second line discontinued due to severe toxicity',
-          description: 'Abemaciclib is discontinued due to severe hepatotoxicity (DILI G2-3) and bone progression confirmed on PET. Structural concern in the right femur and pelvis. ECOG 0: Miriam maintains full functional capacity, she works, moves, and lives a normal life despite everything.',
+          description: 'Bone progression confirmed on PET-CT with new foci. Abemaciclib is discontinued due to bone progression and hepatic toxicity (DILI G2-3). ECOG 0: Miriam maintains full functional capacity, she works, moves, and lives a normal life despite everything.',
           highlight: false,
         },
         {
@@ -175,6 +183,14 @@ const timelineEntries = computed(() =>
           highlight: true,
           link: 'https://x.com/javilop/status/2041905341059973294',
           linkLabel: 'See documentation thread →',
+        },
+        {
+          date: 'April 2026,OUTREACH',
+          title: 'Talk at Codemotion Madrid',
+          description: 'Miriam takes the stage at Codemotion Madrid to talk about how AI is helping advance her case. First public outreach event of the project and her return to the tech ecosystem after two years.',
+          highlight: true,
+          link: 'https://x.com/miriamgonp/status/2046266823209890162',
+          linkLabel: 'See the thread on Twitter →',
         },
       ]
 )

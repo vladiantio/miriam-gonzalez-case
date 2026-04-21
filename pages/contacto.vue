@@ -79,7 +79,7 @@
             <!-- For professionals -->
             <div class="mt-10 card-base bg-ocean-50/40 border-ocean-200/50">
               <h3 class="font-display font-semibold text-ink-900 text-sm mb-2">
-                {{ locale === 'es' ? 'Para oncólogos e investigadores' : 'For oncologists and researchers' }}
+                {{ locale === 'es' ? 'Para profesionales de la oncología e investigación' : 'For oncology professionals and researchers' }}
               </h3>
               <p class="text-xs text-ink-600 leading-relaxed">
                 {{ locale === 'es'
@@ -90,13 +90,15 @@
             </div>
           </div>
 
-          <!-- Contact form (Formspree) -->
+          <!-- Contact form (Netlify Forms) -->
           <div>
             <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              name="contact"
               method="POST"
+              data-netlify="true"
               class="card-base space-y-5"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label for="name" class="block text-sm font-medium text-ink-800 mb-1.5">
                   {{ locale === 'es' ? 'Nombre' : 'Name' }}

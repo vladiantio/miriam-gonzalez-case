@@ -41,6 +41,12 @@
         </tbody>
       </table>
     </div>
+    <p class="mt-4 text-xs text-ink-500 leading-relaxed">
+      {{ locale === 'es'
+        ? '⁺ La categoría HER2-ultralow (tinción de membrana en <10% de las células) está presente en este caso según los datos del estudio DIPCAN / MD Anderson Madrid.'
+        : '⁺ The HER2-ultralow category (membrane staining in <10% of cells) is present in this case according to data from the DIPCAN study / MD Anderson Madrid.'
+      }}
+    </p>
   </div>
 </template>
 

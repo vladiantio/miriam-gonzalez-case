@@ -18,30 +18,30 @@
             </p>
           </div>
 
-          <!-- Preview / teaser content -->
+          <!-- Story content -->
           <div class="space-y-6 text-ink-700">
-            <p class="text-lg font-display font-medium text-ink-900">
+            <p>
               {{ locale === 'es'
-                ? 'Una ingeniera de software. Divulgadora. Podcaster. Curiosa compulsiva.'
-                : 'A software engineer. Communicator. Podcaster. Compulsively curious.'
+                ? 'Hace tres años, Míriam se dedicaba a tiempo completo a programar y crear contenido sobre tecnología. Entonces llegó el diagnóstico que lo cambió todo.'
+                : 'Three years ago, Miriam was working full-time as a software engineer and tech content creator. Then came the diagnosis that changed everything.'
               }}
             </p>
             <p>
               {{ locale === 'es'
-                ? 'Miriam no empezó a usar inteligencia artificial por su diagnóstico. Llevaba años hablando de tecnología, de cómo las herramientas digitales están cambiando la forma en que entendemos el mundo. Cuando el cáncer llegó, hizo lo que siempre ha hecho: investigar, preguntar, conectar, y compartir lo que aprende.'
-                : 'Miriam didn\'t start using artificial intelligence because of her diagnosis. She had been talking about technology for years, about how digital tools are changing the way we understand the world. When cancer came, she did what she\'s always done: research, ask, connect, and share what she learns.'
+                ? 'Todo empezó con un dolor de espalda, sesiones de fisioterapia y médicos de cabecera que no buscaban lo que había detrás. Hasta que Míriam lo pidió ella misma.'
+                : 'It started with back pain, physiotherapy sessions, and GPs who weren\'t looking for what was behind it. Until Miriam asked for it herself.'
               }}
             </p>
             <p>
               {{ locale === 'es'
-                ? 'Lo que pasó después no estaba planificado. Un hilo en Twitter. Unos cuantos profesionales que lo vieron y dijeron: yo puedo ayudar. Una IA que empezó a conectar puntos que ningún médico individual había conectado. Y de repente, un equipo internacional trabajando para que la biología de un tumor guíe el tratamiento de una persona.'
-                : 'What happened next wasn\'t planned. A Twitter thread. A few professionals who saw it and said: I can help. An AI that started connecting dots that no single doctor had connected. And suddenly, an international team working to make a tumor\'s biology guide one person\'s treatment.'
+                ? 'Durante dos años, Míriam ha ido reconstruyendo su vida pieza por pieza con tratamientos que han tenido que suspenderse, con un equipo que se fue formando y con una voluntad que no se ha roto.'
+                : 'For two years, Miriam has been rebuilding her life piece by piece with treatments that have had to be discontinued, with a team that kept growing and with a will that has never broken.'
               }}
             </p>
-            <p class="text-ink-500 italic">
+            <p>
               {{ locale === 'es'
-                ? '— El texto completo de esta sección llegará pronto.'
-                : '— The full text of this section is coming soon.'
+                ? 'En esta historia queremos contarte el caso de Míriam, su proceso y su rutina para que conozcas quién es más allá del diagnóstico.'
+                : 'In this story, we want to tell you about Miriam\'s case, her process and her daily routine — so you can get to know who she is beyond the diagnosis.'
               }}
             </p>
           </div>

@@ -61,12 +61,12 @@
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "Si eres oncólogo, investigador, periodista o simplemente quieres ayudar",
+    "subtitle": "Si eres profesional de la oncología, investigador/a, periodista o simplemente quieres ayudar",
     "email_label": "Email",
     "twitter_label": "X / Twitter",
     "linkedin_label": "LinkedIn",
     "gofundme_label": "GoFundMe",
-    "message": "Si tienes información relevante sobre ensayos clínicos, contactos médicos, o quieres colaborar de cualquier forma, no dudes en escribir."
+    "message": "Si tienes información relevante sobre ensayos clínicos, contactos médicos o quieres colaborar de cualquier forma, no dudes en escribir."
   },
   "footer": {
     "disclaimer": "Este sitio es un recurso informativo mantenido por el equipo de apoyo de la paciente. No sustituye asesoramiento médico profesional.",

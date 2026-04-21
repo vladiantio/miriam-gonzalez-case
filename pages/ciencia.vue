@@ -134,8 +134,14 @@
           </div>
           <p class="text-sm text-ink-300 leading-relaxed mb-3">
             {{ locale === 'es'
-              ? 'Un ensayo donde Miriam es la única unidad de análisis, con decisiones terapéuticas guiadas por su perfil molecular específico y no por "HR+ genérico". La ruta: rebiopsia con panel avanzado → MTB en VHIO → puente hacia WIN Consortium para ensayo N-of-1 molecularmente dirigido con IA.'
-              : 'A trial where Miriam is the sole unit of analysis, with therapeutic decisions guided by her specific molecular profile rather than "generic HR+". The path: re-biopsy with advanced panel → MTB at VHIO → bridge to WIN Consortium for a molecularly-directed N-of-1 trial with AI.'
+              ? 'Un ensayo donde Míriam es la única unidad de análisis, con decisiones terapéuticas guiadas por su perfil molecular específico y no por "HR+ genérico". La ruta: rebiopsia con panel avanzado → MTB internacional en WIN Consortium para ensayo N-of-1 molecularmente dirigido con IA.'
+              : 'A trial where Miriam is the sole unit of analysis, with therapeutic decisions guided by her specific molecular profile rather than "generic HR+". The path: re-biopsy with advanced panel → MTB at WIN Consortium international board for a molecularly-directed N-of-1 trial with AI.'
+            }}
+          </p>
+          <p class="text-sm text-ink-400 leading-relaxed mb-3">
+            {{ locale === 'es'
+              ? 'WIN Consortium (Worldwide Innovative Network in Oncology) es una red internacional que conecta centros de excelencia en oncología de precisión con el objetivo de diseñar estrategias diagnósticas y terapéuticas personalizadas.'
+              : 'WIN Consortium (Worldwide Innovative Network in Oncology) is an international network connecting centres of excellence in precision oncology to design personalised diagnostic and therapeutic strategies.'
             }}
           </p>
           <p class="text-sm text-gold-400 font-medium">
@@ -156,28 +162,36 @@ const { locale } = useI18n()
 const treatments = computed(() =>
   locale.value === 'es'
     ? [
-        { line: '1L', regimen: 'Letrozol + Ribociclib + supresión ovárica + ác. zoledrónico', outcome: 'Suspensión precoz de ribociclib por toxicidad grave', active: false },
-        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + supresión ovárica + ác. zoledrónico', outcome: 'Suspendido marzo 2026 por hepatotoxicidad (DILI G2-3) y progresión ósea', active: false },
-        { line: '→', regimen: 'Progresión ósea post-CDK4/6i', outcome: 'Preocupación estructural en fémur derecho y pelvis. ECOG 0. Sin crisis visceral.', active: true },
+        { line: '1L', regimen: 'Letrozol + Ribociclib + Zoladex (goserelina) + ác. zoledrónico', outcome: 'Ribociclib suspendido tras el 1er ciclo por toxicidad. Zoladex se mantiene.', active: false },
+        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelina) + ác. zoledrónico', outcome: 'Al confirmarse progresión y toxicidad, se sustituye la primera línea: se reemplaza letrozol por fulvestrant y ribociclib por abemaciclib. Zoladex se mantiene. Suspendido marzo 2026 por toxicidad hepática (DILI G2-3) y progresión ósea.', active: false },
+        { line: '→', regimen: 'Progresión ósea confirmada en PET-TAC', outcome: 'Aparecen nuevos focos óseos en PET-TAC — señal de que el tumor sigue activo y de que la línea anterior ya no es suficiente. ECOG 0. Sin crisis visceral.', active: true },
       ]
     : [
-        { line: '1L', regimen: 'Letrozole + Ribociclib + ovarian suppression + zoledronic acid', outcome: 'Early ribociclib discontinuation due to severe toxicity', active: false },
-        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + ovarian suppression + zoledronic acid', outcome: 'Discontinued March 2026 due to hepatotoxicity (DILI G2-3) and bone progression', active: false },
-        { line: '→', regimen: 'Bone progression post-CDK4/6i', outcome: 'Structural concern in right femur and pelvis. ECOG 0. No visceral crisis.', active: true },
+        { line: '1L', regimen: 'Letrozole + Ribociclib + Zoladex (goserelin) + zoledronic acid', outcome: 'Ribociclib discontinued after the 1st cycle due to toxicity. Zoladex continued.', active: false },
+        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelin) + zoledronic acid', outcome: 'Upon confirmed progression and toxicity, the first line is replaced: letrozole is switched to fulvestrant and ribociclib to abemaciclib. Zoladex continued. Discontinued March 2026 due to hepatic toxicity (DILI G2-3) and bone progression.', active: false },
+        { line: '→', regimen: 'Bone progression confirmed on PET-CT', outcome: 'New bone foci appear on PET-CT — a sign that the tumour remains active and that the current treatment line is no longer sufficient. ECOG 0. No visceral crisis.', active: true },
       ]
 )
 
 const papers = computed(() =>
   locale.value === 'es'
     ? [
-        { ref: 'Drago 2019', finding: 'Tumores con FGFR1 amplificado: resistentes a CDK4/6i pero sensibles a everolimus', relevance: 'Caso documentado con 71% de reducción tumoral. Everolimus no sería un bonus aleatorio sino posiblemente lo óptimo para este perfil.', link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6825550/' },
-        { ref: 'NCT04483505', finding: 'Triple bloqueo + inhibidor FGFR en HR+/FGFR alterado (ensayo español)', relevance: 'Funcionó en pacientes sin PIK3CA/ESR1 (9.1 vs 1.9 meses). Lo predictivo fue la proteína FGFR1 alta por IHQ, no la amplificación génica → argumento clave para la rebiopsia.', link: 'https://www.nature.com/articles/s41698-025-01106-1' },
-        { ref: 'NCT04529044', finding: 'Ensayo de PRRT con péptidos receptores en cáncer de mama', relevance: 'Relevante si el perfil molecular lo confirma. Hay contacto directo con especialistas que participan en este ensayo.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
+        { ref: 'Tarantino et al., 2020 — JCO', finding: 'HER2-low: definición y relevancia clínica en cáncer de mama', relevance: 'Publicación seminal que formalizó la categoría HER2-low y estableció que más del 55% de los tumores HER2-negativos son HER2-low.', link: 'https://doi.org/10.1200/JCO.19.02488' },
+        { ref: 'Tarantino et al., 2023 — Ann. Oncol.', finding: 'Consenso ESMO: definición formal de HER2-ultralow (<10%)', relevance: 'Consenso internacional que define HER2-ultralow como tinción de membrana en >0% a ≤10% de las células tumorales.', link: 'https://doi.org/10.1016/j.annonc.2023.05.008' },
+        { ref: 'Bardia et al., 2024 — NEJM', finding: 'T-DXd en HER2-ultralow: primera evidencia clínica de beneficio (DESTINY-Breast06)', relevance: 'Primer estudio con datos en la cohorte HER2-ultralow (n=153). PFS mediana de 13,2 vs 8,3 meses con T-DXd frente a quimioterapia.', link: 'https://doi.org/10.1056/NEJMoa2407086' },
+        { ref: 'Ozaki et al., 2022 — Cancers', finding: 'Neoplasias neuroendocrinas de mama: clasificación WHO y pronóstico', relevance: 'Revisión comprensiva que sintetiza la clasificación WHO 2019 y aporta datos de supervivencia en el espectro neuroendocrino del cáncer de mama.', link: 'https://doi.org/10.3390/cancers14010196' },
+        { ref: 'Formisano et al., 2019 — Nat. Commun.', finding: 'Amplificación FGFR1: mecanismo central de resistencia a CDK4/6 inhibidores en ER+', relevance: 'Estudio mecanístico que identificó FGFR1 como driver de resistencia a ribociclib+fulvestrant en tumores ER+ metastásicos.', link: 'https://doi.org/10.1038/s41467-019-09068-2' },
+        { ref: 'Mao et al., 2020 — Clin. Cancer Res.', finding: 'Co-amplificación adquirida FGF3/4/19 + CCND1 (cluster 11q13) y resistencia combinada', relevance: 'Mediante análisis pre/post-resistencia en 60 pacientes, identificó alteraciones FGFR/FGF en el 37% de los casos tras resistencia a CDK4/6i.', link: 'https://doi.org/10.1158/1078-0432.CCR-19-3958' },
+        { ref: 'André et al., 2022 — Nature (SAFIR02)', finding: 'Oncología de precisión guiada por genómica mejora la supervivencia en cáncer de mama metastásico', relevance: 'Ensayo randomizado en 1.462 pacientes HER2-negativos. Demostró por primera vez que la terapia guiada por genómica mejora la supervivencia libre de progresión en pacientes con alteraciones accionables.', link: 'https://doi.org/10.1038/s41586-022-05068-3' },
       ]
     : [
-        { ref: 'Drago 2019', finding: 'FGFR1-amplified tumors: resistant to CDK4/6i but sensitive to everolimus', relevance: 'Documented case with 71% tumor reduction. Everolimus would not be a random bonus but possibly the optimal choice for this profile.', link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6825550/' },
-        { ref: 'NCT04483505', finding: 'Triple blockade + FGFR inhibitor in HR+/FGFR-altered (Spanish trial)', relevance: 'Worked in patients without PIK3CA/ESR1 (9.1 vs 1.9 months). The predictive factor was high FGFR1 protein by IHC, not gene amplification → key argument for re-biopsy.', link: 'https://www.nature.com/articles/s41698-025-01106-1' },
-        { ref: 'NCT04529044', finding: 'PRRT trial with receptor peptides in breast cancer', relevance: 'Relevant if the molecular profile confirms it. There is direct contact with specialists participating in this trial.', link: 'https://clinicaltrials.gov/study/NCT04529044' },
+        { ref: 'Tarantino et al., 2020 — JCO', finding: 'HER2-low: definition and clinical relevance in breast cancer', relevance: 'Seminal publication that formalised the HER2-low category and established that more than 55% of HER2-negative tumours are HER2-low.', link: 'https://doi.org/10.1200/JCO.19.02488' },
+        { ref: 'Tarantino et al., 2023 — Ann. Oncol.', finding: 'ESMO consensus: formal definition of HER2-ultralow (<10%)', relevance: 'International consensus defining HER2-ultralow as membrane staining in >0% to ≤10% of tumour cells.', link: 'https://doi.org/10.1016/j.annonc.2023.05.008' },
+        { ref: 'Bardia et al., 2024 — NEJM', finding: 'T-DXd in HER2-ultralow: first clinical evidence of benefit (DESTINY-Breast06)', relevance: 'First study with data in the HER2-ultralow cohort (n=153). Median PFS of 13.2 vs 8.3 months with T-DXd versus chemotherapy.', link: 'https://doi.org/10.1056/NEJMoa2407086' },
+        { ref: 'Ozaki et al., 2022 — Cancers', finding: 'Neuroendocrine neoplasms of the breast: WHO classification and prognosis', relevance: 'Comprehensive review synthesising the WHO 2019 classification with survival data across the neuroendocrine spectrum of breast cancer.', link: 'https://doi.org/10.3390/cancers14010196' },
+        { ref: 'Formisano et al., 2019 — Nat. Commun.', finding: 'FGFR1 amplification: central mechanism of resistance to CDK4/6 inhibitors in ER+', relevance: 'Mechanistic study identifying FGFR1 as a resistance driver to ribociclib+fulvestrant in metastatic ER+ tumours.', link: 'https://doi.org/10.1038/s41467-019-09068-2' },
+        { ref: 'Mao et al., 2020 — Clin. Cancer Res.', finding: 'Acquired co-amplification FGF3/4/19 + CCND1 (11q13 cluster) and combined resistance', relevance: 'Using pre/post-resistance analysis in 60 patients, identified FGFR/FGF alterations in 37% of cases following CDK4/6i resistance.', link: 'https://doi.org/10.1158/1078-0432.CCR-19-3958' },
+        { ref: 'André et al., 2022 — Nature (SAFIR02)', finding: 'Genomics-guided precision oncology improves survival in metastatic breast cancer', relevance: 'Randomised trial in 1,462 HER2-negative patients. First demonstration that genomics-guided therapy improves progression-free survival in patients with actionable alterations.', link: 'https://doi.org/10.1038/s41586-022-05068-3' },
       ]
 )
 

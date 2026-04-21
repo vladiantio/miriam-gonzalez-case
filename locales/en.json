@@ -61,12 +61,12 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "If you're an oncologist, researcher, journalist, or simply want to help",
+    "subtitle": "If you're an oncology professional, researcher, journalist or simply want to help",
     "email_label": "Email",
     "twitter_label": "X / Twitter",
     "linkedin_label": "LinkedIn",
     "gofundme_label": "GoFundMe",
-    "message": "If you have relevant information about clinical trials, medical contacts, or want to collaborate in any way, don't hesitate to reach out."
+    "message": "If you have relevant information about clinical trials, medical contacts, or you'd like to collaborate in any way, don't hesitate to reach out."
   },
   "footer": {
     "disclaimer": "This site is an informational resource maintained by the patient's support team. It does not replace professional medical advice.",
