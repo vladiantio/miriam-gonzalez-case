@@ -123,7 +123,7 @@
 
 
         <!-- N-of-1 goal -->
-        <div class="card-base bg-ink-950 text-white border-0">
+        <div class="card-base bg-ink-950 text-white border-0 mb-16">
           <div class="flex items-center gap-2.5 mb-4">
             <span class="w-9 h-9 rounded-xl bg-gold-500/20 flex items-center justify-center">
               <Icon name="ph:target-fill" class="w-5 h-5 text-gold-400" />
@@ -151,6 +151,30 @@
             }}
           </p>
         </div>
+
+        <!-- Science articles from content/ -->
+        <div v-if="articles && articles.length > 0">
+          <h2 class="heading-display text-2xl text-ink-950 mb-6">
+            {{ locale === 'es' ? 'Análisis detallados' : 'Detailed analyses' }}
+          </h2>
+          <div class="space-y-4">
+            <NuxtLink
+              v-for="article in articles"
+              :key="article._path"
+              :to="localePath(`/ciencia/${article.stem?.split('/').pop()}`)"
+              class="card-base flex items-start justify-between gap-4 hover:border-gold-300 transition-colors group"
+            >
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                  <span v-for="tag in article.tags" :key="tag" class="tag-ocean text-xs">{{ tag }}</span>
+                </div>
+                <h3 class="font-semibold text-ink-900 text-sm mb-1 group-hover:text-ocean-700 transition-colors">{{ article.title }}</h3>
+                <p class="text-xs text-ink-500 leading-relaxed line-clamp-2">{{ article.excerpt }}</p>
+              </div>
+              <Icon name="ph:arrow-right" class="shrink-0 w-4 h-4 text-ink-400 group-hover:text-ocean-600 transition-colors mt-0.5" aria-hidden="true" />
+            </NuxtLink>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -158,6 +182,21 @@
 
 <script setup lang="ts">
 const { locale } = useI18n()
+const localePath = useLocalePath()
+
+const { data: articles } = await useAsyncData(
+  `ciencia-index-${locale.value}`,
+  async () => {
+    if (locale.value === 'en') {
+      const enArticles = await queryCollection('science_articles')
+        .order('date', 'DESC')
+        .all()
+      if (enArticles.length) return enArticles
+    }
+    return queryCollection('ciencia_articles').order('date', 'DESC').all()
+  },
+  { watch: [locale] },
+)
 
 const treatments = computed(() =>
   locale.value === 'es'

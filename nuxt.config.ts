@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@nuxt/icon',
+    '@nuxt/content',
   ],
 
   app: {
@@ -45,6 +46,15 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'i18n_redirected',
       fallbackLocale: 'es',
+    },
+    customRoutes: 'config',
+    pages: {
+      'ciencia/index': { en: '/science' },
+      'ciencia/[slug]': { en: '/science/[slug]' },
+      'historia/index': { en: '/story' },
+      'historia/[slug]': { en: '/story/[slug]' },
+      'equipo': { en: '/team' },
+      'contacto': { en: '/contact' },
     },
   },
 

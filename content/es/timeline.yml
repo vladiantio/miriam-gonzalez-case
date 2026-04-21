@@ -1,0 +1,98 @@
+entries:
+  - date: "2021, Antecedentes"
+    title: Un primer aviso que quedó sin respuesta
+    description: >
+      Miriam acude a urgencias por un sangrado en la mama. Le realizan una ecografía.
+      El resultado es normal. Y ahí se queda la cosa.
+    highlight: false
+
+  - date: "31 de octubre de 2023, Síntomas"
+    title: Empieza el dolor de espalda
+    description: >
+      Miriam empieza a notar un dolor lumbar persistente. Semanas de fisioterapia y
+      consultas sin una respuesta clara. Hasta que ella misma solicita una resonancia magnética.
+    highlight: false
+
+  - date: "11 de enero de 2024, Diagnóstico"
+    title: El resultado llega por email
+    description: >
+      El informe de la resonancia llega por email, un jueves por la mañana. La conclusión:
+      "probable metástasis vertebrales". Sin médico al lado. Sin contexto. Solo una pantalla.
+      Ese mismo día, Miriam ingresa por urgencias. El martes siguiente tiene el diagnóstico
+      completo: carcinoma de mama con diferenciación neuroendocrina estadio IV, con metástasis
+      óseas múltiples y compresión medular en L3. Tiene 32 años. Ese mismo martes inicia
+      radioterapia sobre las vértebras afectadas.
+    highlight: true
+
+  - date: "Enero–febrero de 2024, Primera línea"
+    title: "Tratamiento: Letrozol + Ribociclib"
+    description: >
+      Se inicia primera línea de tratamiento con letrozol, ribociclib, supresión ovárica y
+      ácido zoledrónico. Tras el primer ciclo, Miriam ingresa de urgencias con dificultad
+      respiratoria aguda. El ribociclib se suspende definitivamente.
+    highlight: false
+
+  - date: "Febrero–abril de 2024, Ingreso urgente"
+    title: "50 días hospitalizada, 10 en UCI"
+    description: >
+      La neutropenia severa causada por el ribociclib derivó en una neumonía necrotizante
+      bilateral con áreas de necrosis pulmonar. Miriam ingresa en UCI con insuficiencia
+      respiratoria grave, plaquetas en niveles críticos y necesidad de soporte respiratorio
+      de alto flujo. Se realizan fibrobroncoscopia, transfusiones y antibioterapia intensiva.
+      La estancia total supera los 50 días. Fue el momento más grave desde el diagnóstico.
+    highlight: true
+    image: /img/uci.jpeg
+
+  - date: "Julio de 2024, DIPCAN"
+    title: El tumor revela su identidad molecular
+    description: >
+      Miriam participa en el estudio DIPCAN de MD Anderson Madrid, que permite realizar un
+      análisis genómico avanzado (TSO500) sobre tejido tumoral. Los resultados cambian la
+      comprensión del caso: diferenciación neuroendocrina del ~80%, amplificación FGFR1 ×13
+      y otros marcadores del cluster 11q13. Por primera vez, el tumor tiene un perfil molecular definido.
+    highlight: true
+
+  - date: "Enero de 2025, Segunda línea"
+    title: "Tratamiento: Fulvestrant + Abemaciclib"
+    description: >
+      Tras confirmar progresión en PET-TAC, se pasa a segunda línea: se sustituye letrozol
+      por fulvestrant y ribociclib por abemaciclib. Zoladex se mantiene.
+    highlight: false
+
+  - date: "Marzo de 2026, Progresión"
+    title: Segunda línea suspendida por toxicidad grave
+    description: >
+      Progresión ósea confirmada en PET-TAC con nuevos focos. El abemaciclib se suspende
+      por progresión ósea y toxicidad hepática (DILI G2-3). ECOG 0: Miriam mantiene plena
+      capacidad funcional, trabaja, se mueve y hace vida normal a pesar de todo.
+    highlight: false
+
+  - date: "Abril 2026, Semana 1"
+    title: Se forma el equipo y empieza la búsqueda
+    description: >
+      Miriam empieza a investigar su caso con inteligencia artificial. Un hilo en Twitter.
+      Unos profesionales que lo ven y dicen: yo puedo ayudar. En días, se forma un equipo
+      multidisciplinar espontáneo con especialistas de cuatro países.
+    highlight: true
+    link: https://x.com/miriamgonp/status/2041824144484917749
+    linkLabel: "Ver el hilo original en Twitter →"
+
+  - date: "8–9 de abril de 2026, IA"
+    title: Documentación clínica generada con IA
+    description: >
+      Se genera el resumen clínico completo del caso usando modelos de lenguaje avanzados.
+      El documento está diseñado para segundas opiniones internacionales y para comunicar
+      el caso a especialistas de alto nivel.
+    highlight: true
+    link: https://x.com/javilop/status/2041905341059973294
+    linkLabel: "Ver hilo de documentación →"
+
+  - date: "Abril 2026, DIVULGACIÓN"
+    title: Ponencia en Codemotion Madrid
+    description: >
+      Míriam sube al escenario de Codemotion Madrid para hablar de cómo la IA está ayudando
+      a avanzar su caso. Primer acto público de divulgación del proyecto y regreso al
+      ecosistema tech tras dos años.
+    highlight: true
+    link: https://x.com/miriamgonp/status/2046266823209890162
+    linkLabel: "Ver el hilo en Twitter →"

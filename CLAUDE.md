@@ -31,19 +31,40 @@ La web tiene dos audiencias: científicos/médicos (página de ciencia, perfil m
 ### Formulario de contacto
 - Formspree (sin backend). El ID del formulario va en `pages/contacto.vue` donde dice `YOUR_FORM_ID`.
 
-### Contenido futuro en Markdown
-- La estructura `content/es/` y `content/en/` existe pero está vacía. Cuando el volumen de actualizaciones crezca (especialmente el timeline), se migrará de datos hardcoded en Vue a archivos `.md` consumidos por Nuxt Content v3. Por ahora todo está en los `.vue` porque hay pocas entradas y el equipo técnico puede editar directamente.
+### Nuxt Content v3
+- `@nuxt/content` v3 activo. Colecciones definidas en `content.config.ts`.
+- 6 colecciones: `timeline_es`, `timeline_en`, `historia`, `story`, `ciencia_articles`, `science_articles`.
+- Timeline: archivos `.yml` en `content/es/timeline.yml` y `content/en/timeline.yml`.
+- Historia y ciencia: archivos `.md` en `content/es/historia/`, `content/en/story/`, `content/es/ciencia/`, `content/en/science/`.
+- Los artículos/capítulos se enlazan entre idiomas con `translationKey` en frontmatter.
+- Fallback de traducción: si no existe versión EN, se muestra la ES con aviso. No redirige.
+- Slugs por idioma: ES `/ciencia/analisis-fgfr1`, EN `/en/science/fgfr1-analysis` — rutas custom configuradas en `nuxt.config.ts` bajo `i18n.pages`.
+- Si se modifica `content.config.ts`, correr `npx nuxt prepare` para regenerar tipos.
 
 ## Estructura del proyecto
 
 ```
 pages/
-  index.vue         → Landing: hero + sección GoFundMe + perfil molecular + tesis
-  ciencia.vue       → Página científica completa (la más densa)
-  equipo.vue        → Equipo anónimo por profesión, 3 bloques
-  timeline.vue      → Cronología 2024 → abril 2026
-  historia.vue      → Placeholder para texto de amiga
-  contacto.vue      → Formulario Formspree + enlaces + caja para oncólogos
+  index.vue              → Landing: hero + sección GoFundMe + perfil molecular + tesis
+  ciencia/
+    index.vue            → Página científica completa + lista de artículos
+    [slug].vue           → Artículo individual de ciencia (ES: /ciencia/slug, EN: /en/science/slug)
+  equipo.vue             → Equipo anónimo por profesión, 3 bloques
+  timeline.vue           → Cronología — consume content/es|en/timeline.yml
+  historia/
+    index.vue            → Lista de capítulos + placeholder hasta que llegue el texto
+    [slug].vue           → Capítulo individual con paginación prev/next
+  contacto.vue           → Formulario Formspree + enlaces + caja para oncólogos
+
+content/
+  es/
+    timeline.yml         → Entradas del timeline en español
+    historia/            → Capítulos en español (.md)
+    ciencia/             → Artículos científicos en español (.md)
+  en/
+    timeline.yml         → Entradas del timeline en inglés
+    story/               → Capítulos en inglés (.md)
+    science/             → Artículos científicos en inglés (.md)
 
 components/
   SiteNav.vue       → Nav sticky, scroll-aware, mobile hamburger, i18n toggle

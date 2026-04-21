@@ -11,7 +11,7 @@
             {{ locale === 'es' ? 'El perfil molecular' : 'The molecular profile' }}
           </h2>
           <NuxtLink
-            :to="localePath('/ciencia')"
+            :to="localePath({ name: 'ciencia' })"
             class="link-underline text-sm"
           >
             {{ locale === 'es' ? 'Ver la ciencia completa →' : 'See the full science →' }}

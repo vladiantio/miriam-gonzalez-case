@@ -104,8 +104,9 @@
 </template>
 
 <script setup lang="ts">
-const { locale, setLocale, t } = useI18n()
+const { locale, t } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
 
 const mobileOpen = ref(false)
 const scrolled = ref(false)
@@ -115,16 +116,17 @@ const langAriaLabel = computed(() =>
 )
 
 const navItems = [
-  { key: 'home', to: '/' },
-  { key: 'science', to: '/ciencia' },
-  { key: 'team', to: '/equipo' },
-  { key: 'timeline', to: '/timeline' },
-  { key: 'story', to: '/historia' },
-  { key: 'contact', to: '/contacto' },
+  { key: 'home', to: { name: 'index' } },
+  { key: 'science', to: { name: 'ciencia' } },
+  { key: 'team', to: { name: 'equipo' } },
+  { key: 'timeline', to: { name: 'timeline' } },
+  { key: 'story', to: { name: 'historia' } },
+  { key: 'contact', to: { name: 'contacto' } },
 ]
 
 function toggleLocale() {
-  setLocale(locale.value === 'es' ? 'en' : 'es')
+  const newLocale = locale.value === 'es' ? 'en' : 'es'
+  navigateTo(switchLocalePath(newLocale))
 }
 
 onMounted(() => {

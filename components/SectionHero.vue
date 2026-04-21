@@ -46,7 +46,7 @@
           {{ $t('hero.cta_donate') }}
         </a>
         <NuxtLink
-          :to="localePath('/ciencia')"
+          :to="localePath({ name: 'ciencia' })"
           class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/80 hover:bg-white border border-ink-200 text-ink-800 font-semibold rounded-xl transition-all hover:shadow-md hover:-translate-y-0.5"
         >
           <Icon name="ph:flask-fill" class="w-4 h-4 text-ocean-600" />

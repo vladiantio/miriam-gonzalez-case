@@ -1,104 +1,94 @@
 # Cómo gestionar el contenido de la web
 
-Este documento explica cómo añadir y editar contenido desde este repo.
-No hace falta tocar código. Solo archivos Markdown.
+Este documento explica cómo añadir y editar contenido.
+No hace falta tocar código. Solo archivos Markdown o YAML.
 
 ---
 
 ## Estructura del repo
 
 ```
-es/
-  timeline.md          → cronología completa (un solo archivo, se va ampliando)
-  historia/
-    01.md   → capítulo 1 → genera /historia/01-...
-    02.md  → capítulo 2 → genera /historia/02-...
-  ciencia/
-    analisis-fgfr1.md             → artículo   → genera /ciencia/analisis-fgfr1
-    perfil-neuroendocrino.md      → artículo   → genera /ciencia/perfil-...
+content/
+  es/
+    timeline.yml          → cronología completa en español
+    historia/
+      01-antes-del-diagnostico.md   → capítulo 1 → genera /historia/01-...
+      02-cuando-llego-el-cancer.md  → capítulo 2 → genera /historia/02-...
+    ciencia/
+      analisis-fgfr1.md             → artículo → genera /ciencia/analisis-fgfr1
 
-en/
-  timeline.md
-  historia/
-    01.md
-  ciencia/
-    fgfr1-analysis.md
+  en/
+    timeline.yml          → cronología completa en inglés
+    story/
+      01-before-the-diagnosis.md    → genera /en/story/01-...
+    science/
+      fgfr1-analysis.md             → genera /en/science/fgfr1-analysis
 ```
 
 > No es obligatorio tener todos los archivos en los dos idiomas.
-> Si un artículo o capítulo solo existe en un idioma, la web lo muestra
-> en ese idioma independientemente de lo que tenga seleccionado el usuario.
+> Si un artículo o capítulo solo existe en español, la web lo muestra
+> en español independientemente del idioma seleccionado, con un aviso.
 > Es mejor leer en español que no leer nada.
 
 ---
 
-## 1. Timeline (`es/timeline.md`)
+## 1. Timeline
 
-Un solo archivo. Las entradas se añaden al final. El orden en el archivo
-es el orden en la web — de más antiguo arriba a más reciente abajo.
+El timeline usa archivos **YAML** (no Markdown). Un solo archivo por idioma.
+Las entradas se añaden al final. El orden en el archivo es el orden en la web.
 
-### Formato de una entrada
+### Formato de una entrada (`content/es/timeline.yml`)
 
 ```yaml
-- date: 10 Abril 2026
-  title: Avalancha de puertas abiertas
-  description: >
-    VHIO acepta evaluar el caso. El jefe de onco-radioterapia de la Arrixaca
-    lleva el caso a comité tumoral. Guardant360 realizado. GoFundMe activado.
-  highlight: true
-  link: https://x.com/miriamgonp
-  linkLabel: Ver en X
+  - date: "10 Abril 2026"
+    title: Avalancha de puertas abiertas
+    description: >
+      VHIO acepta evaluar el caso. El jefe de onco-radioterapia de la Arrixaca
+      lleva el caso a comité tumoral. Guardant360 realizado. GoFundMe activado.
+    highlight: true
+    link: https://x.com/miriamgonp
+    linkLabel: Ver en X
 ```
 
 ### Campos
 
-| Campo       | Obligatorio | Qué es |
-|-------------|-------------|--------|
-| `date`      | ✅ | Fecha o periodo. Texto libre: "Abril 2026", "8-9 Abril 2026", "2024 — Diagnóstico" |
-| `title`     | ✅ | Título corto del hito |
+| Campo         | Obligatorio | Qué es |
+|---------------|-------------|--------|
+| `date`        | ✅ | Fecha o periodo. Texto libre: "Abril 2026", "8-9 Abril 2026", "2024, Diagnóstico" |
+| `title`       | ✅ | Título corto del hito |
 | `description` | ✅ | Descripción. Usar `>` al inicio para texto que ocupa más de una línea |
-| `highlight` | ✅ | `true` = hito importante (acento dorado). `false` = evento menor |
-| `link`      | ❌ | URL opcional (tweet, publicación, noticia...) |
-| `linkLabel` | ❌ | Texto del enlace. Obligatorio si hay `link` |
+| `highlight`   | ✅ | `true` = hito importante (acento dorado). `false` = evento menor |
+| `link`        | ❌ | URL opcional (tweet, publicación, noticia...) |
+| `linkLabel`   | ❌ | Texto del enlace. Obligatorio si hay `link` |
+| `image`       | ❌ | Ruta a imagen en `/public/img/` |
 
 ### Estructura completa del archivo
 
 ```yaml
----
 entries:
-  - date: 2024 — Diagnóstico
+  - date: "2024, Diagnóstico"
     title: Diagnóstico de cáncer de mama metastásico
     description: >
       Miriam ingresa por urgencias sin poder andar. Cáncer de mama ER+/HER2-
-      con metástasis óseas exclusivas. Diferenciación neuroendocrina (~80%)
-      y amplificación FGFR1 ×13 identificadas en TSO500.
+      con metástasis óseas exclusivas.
     highlight: true
 
-  - date: Marzo 2026 — Progresión
-    title: Progresión ósea y hepatotoxicidad
-    description: >
-      Se suspende abemaciclib por DILI G2-3 y progresión ósea confirmada en PET.
-      Preocupación estructural en fémur y pelvis.
-    highlight: true
-
-  - date: 10 Abril 2026
+  - date: "10 Abril 2026"
     title: Avalancha de puertas abiertas
     description: >
-      VHIO acepta evaluar el caso. GoFundMe activado. Oncóloga de Houston
-      se ofrece a investigar.
+      VHIO acepta evaluar el caso. GoFundMe activado.
     highlight: true
     link: https://x.com/miriamgonp
     linkLabel: Ver en X
----
 ```
 
 ### Añadir una nueva entrada
 
-Copiar este bloque al final de la lista y rellenarlo:
+Copiar este bloque al final de la lista (respetando la indentación de 2 espacios):
 
 ```yaml
-  - date: 
-    title: 
+  - date: ""
+    title: ""
     description: >
       
     highlight: false
@@ -106,10 +96,10 @@ Copiar este bloque al final de la lista y rellenarlo:
 
 ---
 
-## 2. Historia (`es/historia/`)
+## 2. Historia (`content/es/historia/`)
 
 Cada capítulo es un archivo `.md` separado. Al crear un archivo nuevo,
-la web genera automáticamente una nueva página.
+la web genera automáticamente una nueva página con navegación prev/next.
 
 ### Nombre del archivo
 
@@ -121,12 +111,7 @@ Usar número de orden + slug descriptivo:
 03-el-equipo.md
 ```
 
-El número controla el orden en el índice de la web.
-
-### Idioma del archivo
-
-No es obligatorio crear la versión en inglés. Si solo existe la versión
-española, los usuarios en inglés verán el capítulo en español igualmente.
+El número controla el orden en el índice y la paginación.
 
 ### Formato del archivo
 
@@ -136,6 +121,7 @@ order: 1
 title: Antes del diagnóstico
 subtitle: Quién es Miriam más allá del cáncer
 excerpt: Una ingeniera de software, divulgadora y podcaster que llevaba años hablando de tecnología cuando el cáncer llegó.
+translationKey: before-the-diagnosis
 ---
 
 Una ingeniera de software. Divulgadora. Podcaster. Curiosa compulsiva.
@@ -152,18 +138,27 @@ formato estándar de Markdown.
 
 ### Campos del frontmatter
 
-| Campo      | Obligatorio | Qué es |
-|------------|-------------|--------|
-| `order`    | ✅ | Número de orden para el índice |
-| `title`    | ✅ | Título del capítulo |
-| `subtitle` | ❌ | Subtítulo opcional |
-| `excerpt`  | ✅ | Resumen de 1-2 frases. Aparece en el índice y en redes sociales |
+| Campo            | Obligatorio | Qué es |
+|------------------|-------------|--------|
+| `order`          | ✅ | Número de orden para el índice y la paginación |
+| `title`          | ✅ | Título del capítulo |
+| `subtitle`       | ❌ | Subtítulo opcional |
+| `excerpt`        | ✅ | Resumen de 1-2 frases. Aparece en el índice y en redes sociales |
+| `translationKey` | ❌ | Clave compartida con la versión EN para enlazar traducciones |
+
+### Versión en inglés (`content/en/story/`)
+
+El archivo en inglés usa el mismo número de orden pero slug en inglés:
+- ES: `content/es/historia/01-antes-del-diagnostico.md`
+- EN: `content/en/story/01-before-the-diagnosis.md`
+
+Ambos deben tener el mismo `translationKey` en el frontmatter.
 
 ---
 
-## 3. Ciencia (`es/ciencia/`)
+## 3. Ciencia (`content/es/ciencia/`)
 
-Cada análisis o artículo generado por IA es un archivo `.md` separado.
+Cada análisis generado por IA es un archivo `.md` separado.
 La web genera automáticamente una página para cada uno y los lista en `/ciencia`.
 
 ### Nombre del archivo
@@ -174,14 +169,7 @@ Slug descriptivo en minúsculas con guiones:
 analisis-fgfr1-amplificacion.md
 perfil-neuroendocrino.md
 resistencia-cdk4-6i.md
-everolimus-drago-2019.md
 ```
-
-### Idioma del archivo
-
-Los artículos suelen generarse primero en español. No hace falta crear la
-versión en inglés para publicar — los usuarios en inglés leerán el artículo
-en español hasta que exista la traducción.
 
 ### Formato del archivo
 
@@ -193,6 +181,7 @@ tags: [FGFR1, amplificación, driver, BC-NED]
 excerpt: >
   Análisis de la implicación terapéutica de la amplificación FGFR1 ×13
   en el contexto de un tumor híbrido luminal-neuroendocrino.
+translationKey: fgfr1-analysis
 references:
   - id: Drago 2019
     link: https://pmc.ncbi.nlm.nih.gov/articles/PMC6825550/
@@ -203,29 +192,25 @@ references:
 ## El problema
 
 La amplificación FGFR1 ×13 en este caso no es una alteración secundaria...
-
-## Evidencia existente
-
-El trabajo de Drago et al. (2019) documenta...
-
-## Implicación terapéutica
-
-Los datos sugieren que un inhibidor FGFR combinado con...
-
-## Conclusión
-
-En este perfil molecular específico, la estrategia óptima sería...
 ```
 
 ### Campos del frontmatter
 
-| Campo        | Obligatorio | Qué es |
-|--------------|-------------|--------|
-| `title`      | ✅ | Título del análisis |
-| `date`       | ✅ | Fecha en formato `YYYY-MM-DD` |
-| `tags`       | ✅ | Lista de etiquetas para filtrar y agrupar artículos |
-| `excerpt`    | ✅ | Resumen de 2-3 frases. Aparece en el índice |
-| `references` | ❌ | Referencias con `id` (cómo aparece en el texto) y `link` |
+| Campo            | Obligatorio | Qué es |
+|------------------|-------------|--------|
+| `title`          | ✅ | Título del análisis |
+| `date`           | ✅ | Fecha en formato `YYYY-MM-DD` |
+| `tags`           | ✅ | Lista de etiquetas para filtrar y agrupar artículos |
+| `excerpt`        | ✅ | Resumen de 2-3 frases. Aparece en el índice |
+| `translationKey` | ❌ | Clave compartida con la versión EN para enlazar traducciones |
+| `references`     | ❌ | Referencias con `id` (cómo aparece en el texto) y `link` |
+
+### Versión en inglés (`content/en/science/`)
+
+- ES: `content/es/ciencia/analisis-fgfr1.md` → URL: `/ciencia/analisis-fgfr1`
+- EN: `content/en/science/fgfr1-analysis.md` → URL: `/en/science/fgfr1-analysis`
+
+Ambos deben tener el mismo `translationKey`.
 
 ---
 
@@ -252,4 +237,4 @@ debe consultarse con el equipo médico antes de cambiar:
 2. Hacer commit y push a `main`
 3. La web se regenera automáticamente en los siguientes minutos
 
-No hace falta hacer nada más en el repo de la web.
+No hace falta hacer nada más.
