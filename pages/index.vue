@@ -21,6 +21,30 @@
       </div>
     </section>
 
+    <!-- In the press -->
+    <section class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
+      <div class="section-container">
+        <h2 class="heading-display text-2xl sm:text-3xl text-ink-950 mb-10 text-center">
+          {{ locale === 'es' ? 'En los medios' : 'In the press' }}
+        </h2>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <a
+            v-for="outlet in pressOutlets"
+            :key="outlet.name"
+            :href="outlet.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-center opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            :aria-label="outlet.name"
+          >
+            <span class="font-display font-bold text-xl text-ink-600 group-hover:text-ink-900 transition-colors">
+              {{ outlet.name }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Thesis callout -->
     <section class="py-20 bg-ink-950 text-white relative overflow-hidden" :aria-label="locale === 'es' ? 'Tesis central' : 'Core thesis'">
       <!-- Decorative dots -->
@@ -50,4 +74,12 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 const localePath = useLocalePath()
+
+// Update URLs when articles are published
+const pressOutlets = [
+  { name: 'El País', url: '#' },
+  { name: 'RTVE', url: '#' },
+  { name: 'breastcancer.org', url: '#' },
+  { name: 'Confidencial Salud', url: '#' },
+]
 </script>
