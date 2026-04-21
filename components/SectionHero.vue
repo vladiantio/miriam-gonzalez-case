@@ -75,16 +75,16 @@ const { locale } = useI18n()
 const stats = computed(() =>
   locale.value === 'es'
     ? [
-        { value: '2024', label: 'Año del diagnóstico' },
-        { value: '5+', label: 'Especialistas internacionales en su caso' },
-        { value: '0', label: 'Terapias aprobadas para su perfil molecular' },
-        { value: '1', label: 'Caso que la sanidad pública no contempla' },
+        { value: '80%', label: 'Del tumor se comporta como un tipo celular que no debería estar en un cáncer de mama' },
+        { value: '×13', label: 'Veces amplificado el gen que hace resistentes los tratamientos estándar' },
+        { value: '2', label: 'Líneas de tratamiento agotadas sin respuesta' },
+        { value: '5+', label: 'Especialistas de 4 países trabajando en su caso' },
       ]
     : [
-        { value: '2024', label: 'Year of diagnosis' },
-        { value: '5+', label: 'International specialists on her case' },
-        { value: '0', label: 'Approved therapies for her molecular profile' },
-        { value: '1', label: 'Case that public healthcare doesn\'t address' },
+        { value: '80%', label: 'Of the tumor behaves like a cell type that shouldn\'t appear in breast cancer' },
+        { value: '×13', label: 'Times amplified the gene that makes standard treatments ineffective' },
+        { value: '2', label: 'Treatment lines exhausted without response' },
+        { value: '5+', label: 'Specialists from 4 countries working on her case' },
       ]
 )
 </script>
