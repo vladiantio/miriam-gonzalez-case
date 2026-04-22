@@ -33,6 +33,14 @@
 
         <!-- Placeholder until the friend writes the content -->
         <article class="prose prose-ink max-w-2xl">
+           <div class="card-base border-l-4 border-l-gold-400 mb-10">
+            <p class="text-sm text-ink-600 italic leading-relaxed">
+              {{ locale === 'es'
+                ? 'Esta sección está siendo escrita por una persona cercana a Miriam. Contará su historia desde antes del diagnóstico: quién es más allá del cáncer, cómo llegó hasta aquí, y por qué importa lo que está haciendo. Estará disponible pronto.'
+                : 'This section is being written by someone close to Miriam. It will tell her story from before the diagnosis: who she is beyond cancer, how she got here, and why what she\'s doing matters. Coming soon.'
+              }}
+            </p>
+          </div>
           <!-- Story content -->
           <div class="space-y-6 text-ink-700">
             <p>
