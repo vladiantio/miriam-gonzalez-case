@@ -75,15 +75,15 @@ const { locale } = useI18n()
 const stats = computed(() =>
   locale.value === 'es'
     ? [
-        { value: '80%', label: 'Del tumor se comporta como un tipo celular que no debería estar en un cáncer de mama' },
+        { value: '80%', label: 'Del tumor tiene diferenciación neuroendocrina — el componente que hace que su biología no se parezca a ningún cáncer de mama convencional' },
         { value: '×13', label: 'Veces amplificado el gen que hace resistentes los tratamientos estándar' },
-        { value: '2', label: 'Líneas de tratamiento agotadas sin respuesta' },
+        { value: '2', label: 'Líneas de tratamiento completadas con respuesta limitada — ninguna sostenible a largo plazo' },
         { value: '5+', label: 'Especialistas de 4 países trabajando en su caso' },
       ]
     : [
-        { value: '80%', label: 'Of the tumor behaves like a cell type that shouldn\'t appear in breast cancer' },
+        { value: '80%', label: 'Of the tumor shows neuroendocrine differentiation — the component that makes its biology unlike any conventional breast cancer' },
         { value: '×13', label: 'Times amplified the gene that makes standard treatments ineffective' },
-        { value: '2', label: 'Treatment lines exhausted without response' },
+        { value: '2', label: 'Treatment lines completed with limited response — none sustainable long-term' },
         { value: '5+', label: 'Specialists from 4 countries working on her case' },
       ]
 )

@@ -30,16 +30,18 @@
   },
   "gofundme": {
     "title": "¿Por qué necesitamos tu ayuda?",
-    "subtitle": "Cada euro acerca a Miriam a una biopsia molecular que puede cambiar su tratamiento y sentar un precedente para otros pacientes.",
+    "subtitle": "Miriam necesita financiar una estrategia de diagnóstico de precisión que la sanidad pública no contempla. Cada contribución acerca su caso a una respuesta — y puede sentar un precedente para otros pacientes con tumores fuera de guía.",
     "what_title": "¿Qué financiamos?",
+    "what_intro": "El dinero cubre las necesidades del caso a medida que avanzan — no solo una prueba, sino todo lo que rodea buscar el tratamiento correcto para un tumor que no tiene protocolo.",
     "what_items": [
-      "Rebiopsia ósea con perfilado molecular avanzado",
-      "Inmunohistoquímica extendida y funcional (p-AKT, p-ERK, SSTR2)",
-      "Proteómica funcional (RPPA) si es viable",
-      "Segundas opiniones internacionales"
+      "Rebiopsia ósea con panel genómico avanzado",
+      "Pruebas de inmunohistoquímica funcional para identificar dianas terapéuticas",
+      "Consultas y segundas opiniones con especialistas internacionales",
+      "Documentación clínica para acceso a ensayos y programas de uso compasivo",
+      "Cualquier prueba adicional que surja a lo largo del proceso"
     ],
     "why_title": "¿Por qué no lo cubre la sanidad pública?",
-    "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real (con un 80% de diferenciación neuroendocrina y amplificación FGFR1) exige pruebas de precisión que no están incluidas en el protocolo. Sin estas pruebas, Miriam recibe el mismo tratamiento que una paciente con un tumor completamente distinto.",
+    "why_text": "Las guías clínicas actuales clasifican este tumor como \"HR+ estándar\", pero su biología real — con un 80% de diferenciación neuroendocrina y amplificación FGFR1 ×13 — necesita pruebas de precisión que no están incluidas en el protocolo. Sin ellas, el tratamiento es insuficiente para lo que realmente tiene Miriam.",
     "transparency_title": "Máxima transparencia",
     "transparency_text": "Cada gasto está documentado públicamente. Pedimos presupuestos a centros de referencia internacionales y los compartimos con la comunidad."
   },

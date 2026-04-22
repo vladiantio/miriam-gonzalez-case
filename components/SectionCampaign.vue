@@ -17,6 +17,9 @@
             </span>
             <h3 class="font-display font-semibold text-ink-900">{{ $t('gofundme.what_title') }}</h3>
           </div>
+          <p v-if="$te('gofundme.what_intro')" class="text-sm text-ink-600 leading-relaxed mb-4 italic">
+            {{ $t('gofundme.what_intro') }}
+          </p>
           <ul class="space-y-3">
             <li
               v-for="(item, i) in $tm('gofundme.what_items')"

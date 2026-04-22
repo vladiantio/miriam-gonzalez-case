@@ -30,16 +30,18 @@
   },
   "gofundme": {
     "title": "Why do we need your help?",
-    "subtitle": "Every contribution brings Miriam closer to a molecular biopsy that could change her treatment and set a precedent for other patients.",
+    "subtitle": "Miriam needs to fund a precision diagnostic strategy that public healthcare doesn't cover. Every contribution brings her case closer to an answer — and could set a precedent for other patients with tumours outside clinical guidelines.",
     "what_title": "What are we funding?",
+    "what_intro": "The money covers the needs of the case as they emerge — not just one test, but everything involved in finding the right treatment for a tumour with no established protocol.",
     "what_items": [
-      "Bone re-biopsy with advanced molecular profiling",
-      "Extended and functional immunohistochemistry (p-AKT, p-ERK, SSTR2)",
-      "Functional proteomics (RPPA) if feasible",
-      "International second opinions"
+      "Bone re-biopsy with advanced genomic panel",
+      "Functional immunohistochemistry tests to identify therapeutic targets",
+      "Consultations and second opinions with international specialists",
+      "Clinical documentation for access to trials and compassionate use programmes",
+      "Any additional test that arises throughout the process"
     ],
     "why_title": "Why isn't this covered by public healthcare?",
-    "why_text": "Current clinical guidelines classify this tumor as \"standard HR+\", but its real biology (with 80% neuroendocrine differentiation and FGFR1 amplification) requires precision tests that are not included in the protocol. Without these tests, Miriam receives the same treatment as a patient with a completely different tumor.",
+    "why_text": "Current clinical guidelines classify this tumour as \"standard HR+\", but its real biology — with 80% neuroendocrine differentiation and FGFR1 ×13 amplification — needs precision tests that are not included in the protocol. Without them, the treatment is insufficient for what Miriam actually has.",
     "transparency_title": "Full transparency",
     "transparency_text": "Every expense is publicly documented. We request quotes from international reference centers and share them with the community."
   },

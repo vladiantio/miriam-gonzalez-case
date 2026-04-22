@@ -202,13 +202,13 @@ const treatments = computed(() =>
   locale.value === 'es'
     ? [
         { line: '1L', regimen: 'Letrozol + Ribociclib + Zoladex (goserelina) + ác. zoledrónico', outcome: 'Ribociclib suspendido tras el 1er ciclo por toxicidad. Zoladex se mantiene.', active: false },
-        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelina) + ác. zoledrónico', outcome: 'Al confirmarse progresión y toxicidad, se sustituye la primera línea: se reemplaza letrozol por fulvestrant y ribociclib por abemaciclib. Zoladex se mantiene. Suspendido marzo 2026 por toxicidad hepática (DILI G2-3) y progresión ósea.', active: false },
-        { line: '→', regimen: 'Progresión ósea confirmada en PET-TAC', outcome: 'Aparecen nuevos focos óseos en PET-TAC — señal de que el tumor sigue activo y de que la línea anterior ya no es suficiente. ECOG 0. Sin crisis visceral.', active: true },
+        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelina) + ác. zoledrónico', outcome: 'Al confirmarse progresión, se sustituye letrozol por fulvestrant y ribociclib por abemaciclib. Zoladex y ácido zoledrónico se mantienen.', active: false },
+        { line: '→', regimen: 'Progresión ósea + suspensión de abemaciclib (marzo 2026)', outcome: 'PET-TAC confirma nuevos focos óseos en pelvis y fémur derecho. El abemaciclib se suspende por progresión ósea y toxicidad hepática (DILI G2-3). Zoladex y ácido zoledrónico continúan. ECOG 0. Sin crisis visceral.', active: true },
       ]
     : [
         { line: '1L', regimen: 'Letrozole + Ribociclib + Zoladex (goserelin) + zoledronic acid', outcome: 'Ribociclib discontinued after the 1st cycle due to toxicity. Zoladex continued.', active: false },
-        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelin) + zoledronic acid', outcome: 'Upon confirmed progression and toxicity, the first line is replaced: letrozole is switched to fulvestrant and ribociclib to abemaciclib. Zoladex continued. Discontinued March 2026 due to hepatic toxicity (DILI G2-3) and bone progression.', active: false },
-        { line: '→', regimen: 'Bone progression confirmed on PET-CT', outcome: 'New bone foci appear on PET-CT — a sign that the tumour remains active and that the current treatment line is no longer sufficient. ECOG 0. No visceral crisis.', active: true },
+        { line: '2L', regimen: 'Fulvestrant + Abemaciclib + Zoladex (goserelin) + zoledronic acid', outcome: 'On confirmed progression, letrozole is replaced by fulvestrant and ribociclib by abemaciclib. Zoladex and zoledronic acid are maintained.', active: false },
+        { line: '→', regimen: 'Bone progression + abemaciclib discontinuation (March 2026)', outcome: 'PET-CT confirms new bone foci in pelvis and right femur. Abemaciclib is discontinued due to bone progression and hepatic toxicity (DILI G2-3). Zoladex and zoledronic acid continue. ECOG 0. No visceral crisis.', active: true },
       ]
 )
 
