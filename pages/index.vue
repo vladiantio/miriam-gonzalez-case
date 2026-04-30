@@ -22,23 +22,25 @@
     </section>
 
     <!-- In the press -->
-    <section v-if="false" class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
+    <section class="section-spacing bg-white/50" :aria-label="locale === 'es' ? 'En los medios' : 'In the press'">
       <div class="section-container">
         <h2 class="heading-display text-2xl sm:text-3xl text-ink-950 mb-10 text-center">
           {{ locale === 'es' ? 'En los medios' : 'In the press' }}
         </h2>
-        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+        <div class="flex flex-wrap justify-center gap-8 sm:gap-12">
           <a
-            v-for="outlet in pressOutlets"
-            :key="outlet.name"
-            :href="outlet.url"
+            v-for="article in currentArticles"
+            :key="article.url"
+            :href="article.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex items-center justify-center opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-            :aria-label="outlet.name"
+            class="group flex flex-col items-center justify-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-w-[280px] max-w-[400px]"
           >
-            <span class="font-display font-bold text-xl text-ink-600 group-hover:text-ink-900 transition-colors">
-              {{ outlet.name }}
+            <span class="font-display font-bold text-lg text-ink-600 group-hover:text-ink-900 transition-colors">
+              {{ article.outlet }}
+            </span>
+            <span class="text-sm text-ink-500 text-center leading-relaxed">
+              {{ article.title }}
             </span>
           </a>
         </div>
@@ -99,11 +101,22 @@ useSeoMeta({
     : 'BC-NED with FGFR1 ×13 amplification. Support the advanced molecular rebiopsy.',
 })
 
-// Update URLs when articles are published
-const pressOutlets = [
-  { name: 'El País', url: '#' },
-  { name: 'RTVE', url: '#' },
-  { name: 'breastcancer.org', url: '#' },
-  { name: 'Confidencial Salud', url: '#' },
-]
+const pressArticles = {
+  es: [
+    {
+      outlet: 'El País',
+      url: 'https://elpais.com/tecnologia/2026-04-23/asi-usa-una-paciente-con-cancer-metastasico-la-ia-para-entender-su-enfermedad-cual-es-el-mejor-metodo-para-hablar-de-salud-con-chatbots.html',
+      title: 'Así usa una paciente con cáncer metastásico la IA para entender su enfermedad'
+    },
+  ],
+  en: [
+    {
+      outlet: 'El País',
+      url: 'https://english.elpais.com/technology/2026-04-25/whats-the-best-way-to-talk-about-health-with-chatbots.html?outputType=amp',
+      title: "What's the best way to talk about health with chatbots"
+    },
+  ],
+}
+
+const currentArticles = computed(() => pressArticles[locale.value as keyof typeof pressArticles] || [])
 </script>
