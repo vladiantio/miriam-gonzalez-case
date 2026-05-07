@@ -37,7 +37,7 @@
             <span class="font-display font-bold text-lg text-ink-600 group-hover:text-ink-900 transition-colors">
               {{ article.outlet }}
             </span>
-            <span class="text-sm text-ink-500 text-center leading-relaxed">
+            <span class="text-sm text-ink-600 text-center leading-relaxed">
               {{ article.title }}
             </span>
           </a>

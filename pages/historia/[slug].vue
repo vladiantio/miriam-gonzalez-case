@@ -5,7 +5,7 @@
 
         <NuxtLink
           :to="localePath('/historia')"
-          class="inline-flex items-center gap-1.5 text-sm text-ink-500 hover:text-ink-900 mb-8 transition-colors"
+          class="inline-flex items-center gap-1.5 text-sm text-ink-600 hover:text-ink-900 mb-8 transition-colors"
         >
           <Icon name="ph:arrow-left" class="w-4 h-4" aria-hidden="true" />
           {{ $t('historia.back_to_story') }}
@@ -22,7 +22,7 @@
 
         <div v-if="!chapter" class="card-base text-center py-16">
           <Icon name="ph:book-open" class="w-12 h-12 text-ink-300 mx-auto mb-4" aria-hidden="true" />
-          <p class="text-ink-500">{{ $t('historia.chapter_not_found') }}</p>
+          <p class="text-ink-600">{{ $t('historia.chapter_not_found') }}</p>
           <NuxtLink :to="localePath('/historia')" class="mt-4 inline-block text-sm text-ocean-600 hover:text-ocean-800 transition-colors">
             {{ $t('historia.back_to_chapters') }}
           </NuxtLink>
@@ -34,7 +34,7 @@
               {{ $t('historia.chapter') }} {{ chapter.order }}
             </span>
             <h1 class="heading-display text-3xl sm:text-4xl text-ink-950 mb-3">{{ chapter.title }}</h1>
-            <p v-if="chapter.subtitle" class="text-ink-500 text-lg leading-relaxed">{{ chapter.subtitle }}</p>
+            <p v-if="chapter.subtitle" class="text-ink-600 text-lg leading-relaxed">{{ chapter.subtitle }}</p>
           </div>
 
           <ContentRenderer

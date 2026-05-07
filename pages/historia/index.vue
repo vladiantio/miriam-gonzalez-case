@@ -37,8 +37,8 @@
                 <h2 class="font-semibold text-ink-900 text-sm mb-1 group-hover:text-gold-700 transition-colors">
                   {{ chapter.title }}
                 </h2>
-                <p v-if="chapter.subtitle" class="text-xs text-ink-500 mb-1.5">{{ chapter.subtitle }}</p>
-                <p class="text-xs text-ink-500 leading-relaxed line-clamp-2">{{ chapter.excerpt }}</p>
+                <p v-if="chapter.subtitle" class="text-xs text-ink-600 mb-1.5">{{ chapter.subtitle }}</p>
+                <p class="text-xs text-ink-600 leading-relaxed line-clamp-2">{{ chapter.excerpt }}</p>
               </div>
               <Icon name="ph:arrow-right" class="shrink-0 w-4 h-4 text-ink-400 group-hover:text-gold-600 transition-colors mt-0.5" aria-hidden="true" />
             </NuxtLink>

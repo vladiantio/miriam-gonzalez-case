@@ -30,7 +30,7 @@
           <div v-for="tx in treatments" :key="tx.line" class="card-base flex items-start gap-4">
             <span
               class="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-mono text-xs font-bold"
-              :class="tx.active ? 'bg-gold-100 text-gold-800' : 'bg-ink-100 text-ink-500'"
+              :class="tx.active ? 'bg-gold-100 text-gold-800' : 'bg-ink-100 text-ink-600'"
             >
               {{ tx.line }}
             </span>
@@ -146,7 +146,7 @@
                   <span v-for="tag in article.tags" :key="tag" class="tag-ocean text-xs">{{ tag }}</span>
                 </div>
                 <h3 class="font-semibold text-ink-900 text-sm mb-1 group-hover:text-ocean-700 transition-colors">{{ article.title }}</h3>
-                <p class="text-xs text-ink-500 leading-relaxed line-clamp-2">{{ article.excerpt }}</p>
+                <p class="text-xs text-ink-600 leading-relaxed line-clamp-2">{{ article.excerpt }}</p>
               </div>
               <Icon name="ph:arrow-right" class="shrink-0 w-4 h-4 text-ink-400 group-hover:text-ocean-600 transition-colors mt-0.5" aria-hidden="true" />
             </NuxtLink>

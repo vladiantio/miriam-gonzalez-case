@@ -6,7 +6,7 @@
         <!-- Back link -->
         <NuxtLink
           :to="localePath('/ciencia')"
-          class="inline-flex items-center gap-1.5 text-sm text-ink-500 hover:text-ink-900 mb-8 transition-colors"
+          class="inline-flex items-center gap-1.5 text-sm text-ink-600 hover:text-ink-900 mb-8 transition-colors"
         >
           <Icon name="ph:arrow-left" class="w-4 h-4" aria-hidden="true" />
           {{ locale === 'es' ? 'Volver a la ciencia' : 'Back to science' }}
@@ -28,7 +28,7 @@
         <!-- 404 -->
         <div v-if="!article" class="card-base text-center py-16">
           <Icon name="ph:file-x" class="w-12 h-12 text-ink-300 mx-auto mb-4" aria-hidden="true" />
-          <p class="text-ink-500">{{ locale === 'es' ? 'Artículo no encontrado.' : 'Article not found.' }}</p>
+          <p class="text-ink-600">{{ locale === 'es' ? 'Artículo no encontrado.' : 'Article not found.' }}</p>
           <NuxtLink :to="localePath('/ciencia')" class="mt-4 inline-block text-sm text-ocean-600 hover:text-ocean-800 transition-colors">
             {{ locale === 'es' ? 'Ver todos los análisis' : 'View all analyses' }}
           </NuxtLink>
@@ -41,7 +41,7 @@
               <span v-for="tag in article.tags" :key="tag" class="tag-ocean">{{ tag }}</span>
             </div>
             <h1 class="heading-display text-3xl sm:text-4xl text-ink-950 mb-4">{{ article.title }}</h1>
-            <p class="text-ink-500 text-sm font-mono">
+            <p class="text-ink-600 text-sm font-mono">
               {{ formatDate(article.date) }}
             </p>
           </div>

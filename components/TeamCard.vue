@@ -10,7 +10,7 @@
       <h3 class="font-display font-semibold text-ink-900 text-sm">
         {{ member.role }}
       </h3>
-      <p class="text-xs text-ink-500 mt-1 leading-relaxed">
+      <p class="text-xs text-ink-600 mt-1 leading-relaxed">
         {{ member.description }}
       </p>
     </div>
