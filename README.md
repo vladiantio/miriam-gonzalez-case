@@ -74,6 +74,7 @@ Cuando el volumen de actualizaciones crezca, migrar los datos a archivos `.md` e
 - [ ] Añadir `og-image.jpg` en `public/`
 - [ ] Texto completo de Alba en `pages/historia.vue`. Se irá creando poco a poco
 - [ ] Configurar dominio en Google Search Console (miriam)
-- [ ] Añadir meta tags de Open Graph específicos por página
+- [ ] Añadir meta tags de Open Graph específicos por página y favicon
 - [ ] Pensar forma de que el timeline se pueda actualizar solo a partir de publicaciones en redes relevantes o algo similar.
 - [ ] AEO u optimización de búsqueda agéntica
+- [ ] Hablar con Miriam sobre qué imágenes quiere poner
