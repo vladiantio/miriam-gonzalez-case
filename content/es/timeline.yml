@@ -42,6 +42,8 @@ entries:
       La estancia total supera los 50 días. Fue el momento más grave desde el diagnóstico.
     highlight: true
     image: /img/hospital.jpg
+    imageAlt: "Miriam en la UCI durante su ingreso hospitalario. Entubada pero divina, haciendose el skincare"
+
 
   - date: "Julio de 2024, DIPCAN"
     title: El tumor revela su identidad molecular
