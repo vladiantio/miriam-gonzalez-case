@@ -107,8 +107,8 @@ If you have a good idea, feature request, or notice something that could be impr
 - [x] ~~Sitemap~~ → `@nuxtjs/sitemap` with i18n hreflang auto-generated
 - [x] ~~AEO / agentic search~~ → `nuxt-ai-ready` serves `/llms.txt`
 - [ ] Alba's complete text in `app/pages/historia/index.vue` — will be added gradually
-- [ ] Add favicon (`public/favicon.ico` or `public/favicon.svg`)
+- [x] Add favicon (`public/favicon.ico` or `public/favicon.svg`)
 - [ ] Verify `helpmiriam.com` in Google Search Console and request indexing
 - [ ] Think about a way to auto-update the timeline from social media posts
 - [ ] Talk to Miriam about what images she wants to use
-- [ ] Research if GoFundMe API can be used instead of iframe
+- [x] Research if GoFundMe API can be used instead of iframe
