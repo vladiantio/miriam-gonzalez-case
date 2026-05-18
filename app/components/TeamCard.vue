@@ -1,5 +1,5 @@
 <template>
-  <div class="card-base flex items-start gap-4 hover:shadow-md transition-shadow">
+  <div class="card-base flex items-start gap-4 hover:shadow-md transition-shadow w-full h-full">
     <div
       class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
       :class="colorClasses"

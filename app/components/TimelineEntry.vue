@@ -30,7 +30,7 @@
       <img
         v-if="entry.image"
         :src="entry.image"
-        alt=""
+        :alt="entry.imageAlt || entry.title"
         class="mt-4 rounded-xl w-full max-w-sm object-cover"
       />
       <a
@@ -57,6 +57,7 @@ defineProps<{
     link?: string
     linkLabel?: string
     image?: string
+    imageAlt?: string
   }
 }>()
 </script>
