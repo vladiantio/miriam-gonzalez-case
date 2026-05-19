@@ -10,41 +10,32 @@
           </p>
         </div>
 
-        <h3 class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
+        <h3 id="team-miriam" class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
           {{ $t('team.miriam_team') }}
         </h3>
 
         <ul aria-labelledby="team-miriam" class="grid sm:grid-cols-2 gap-4 mb-12 stagger-children">
-          <li
-            v-for="member in coreTeam"
-            :key="member.role"
-          >
+          <li v-for="member in coreTeam" :key="member.role">
             <TeamCard :member="member" />
           </li>
         </ul>
 
-        <h3 class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
+        <h3 id="team-medical" class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
           {{ $t('team.medical_support_network') }}
         </h3>
 
         <ul aria-labelledby="team-medical" class="grid sm:grid-cols-2 gap-4 mb-12 stagger-children">
-          <li
-            v-for="member in medicalNetwork"
-            :key="member.role"
-          >
+          <li v-for="member in medicalNetwork" :key="member.role">
             <TeamCard :member="member" />
           </li>
         </ul>
 
-        <h3 class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
+        <h3 id="team-integrative" class="font-display font-semibold text-ink-800 text-sm uppercase tracking-wider mb-6">
           {{ $t('team.integrative_support') }}
         </h3>
 
         <ul aria-labelledby="team-integrative" class="grid sm:grid-cols-2 gap-4 stagger-children">
-          <li
-            v-for="member in integrativeSupport"
-            :key="member.role"
-          >
+          <li v-for="member in integrativeSupport" :key="member.role">
             <TeamCard :member="member" />
           </li>
         </ul>
