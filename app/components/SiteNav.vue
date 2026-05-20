@@ -38,6 +38,14 @@
         >
           {{ $t(`nav.${item.key}`) }}
         </NuxtLink>
+        <a
+          href="https://helpmiriam.notion.site/colabora"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-3 py-1.5 text-sm font-medium text-ink-700 hover:text-ink-950 rounded-lg hover:bg-ink-100/60 transition-all"
+        >
+          {{ $t('nav.collaborate') }}
+        </a>
       </nav>
 
       <!-- Right side: lang switch + CTA + mobile menu -->
@@ -107,6 +115,15 @@
           >
             {{ $t(`nav.${item.key}`) }}
           </NuxtLink>
+          <a
+            href="https://helpmiriam.notion.site/colabora"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2.5 text-sm font-medium text-ink-700 hover:text-ink-950 rounded-lg hover:bg-ink-100/60 transition-all"
+            @click="mobileOpen = false"
+          >
+            {{ $t('nav.collaborate') }}
+          </a>
           <a
             href="https://gofund.me/3e25cae99"
             target="_blank"
