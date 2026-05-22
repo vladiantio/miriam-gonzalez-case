@@ -42,6 +42,8 @@ entries:
       stay exceeds 50 days. This was the most critical moment since diagnosis.
     highlight: true
     image: /img/hospital.jpg
+    imageAlt: "Miriam in the ICU during her hospital stay. Intubated but looking divine, doing her skincare routine."
+
 
   - date: 'July 2024, DIPCAN'
     title: The tumor reveals its molecular identity

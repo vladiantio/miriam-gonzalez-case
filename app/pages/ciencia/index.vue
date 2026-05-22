@@ -25,15 +25,14 @@
           </p>
         </section>
 
-        <h2 class="heading-display text-2xl text-ink-950 mb-6 mt-14">
+        <h2
+          id="treatment-title"
+          class="heading-display text-2xl text-ink-950 mb-6 mt-14"
+        >
           {{ $t('ciencia.treatment_history') }}
         </h2>
-        <div class="space-y-4 mb-14">
-          <div
-            v-for="tx in treatments"
-            :key="tx.line"
-            class="card-base flex items-start gap-4"
-          >
+        <ul class="space-y-4 mb-14" aria-labelledby="treatment-title">
+          <li v-for="tx in treatments" :key="tx.line" class="card-base flex items-start gap-4">
             <span
               class="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-mono text-xs font-bold"
               :class="
@@ -52,8 +51,8 @@
                 {{ tx.outcome }}
               </p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2 class="heading-display text-2xl text-ink-950 mb-6">
           {{ $t('ciencia.key_evidence') }}
@@ -64,24 +63,11 @@
             :key="`${section.title}-${sectionIndex}`"
           >
             <div v-if="section.title" class="mb-4">
-              <h3
-                class="font-display font-semibold text-ink-900 text-lg mb-1.5"
-              >
-                {{ section.title }}
-              </h3>
-              <p
-                v-if="section.subtitle"
-                class="text-sm text-ink-700 leading-relaxed"
-              >
-                {{ section.subtitle }}
-              </p>
+              <h3 :id="`papers-title-${sectionIndex}`" class="font-display font-semibold text-ink-900 text-lg mb-1.5">{{ section.title }}</h3>
+              <p v-if="section.subtitle" class="text-sm text-ink-700 leading-relaxed">{{ section.subtitle }}</p>
             </div>
-            <div class="space-y-4">
-              <div
-                v-for="paper in section.papers"
-                :key="paper.ref"
-                class="card-base"
-              >
+            <ul class="space-y-4" :aria-labelledby="`papers-title-${sectionIndex}`">
+              <li v-for="paper in section.papers" :key="paper.ref" class="card-base">
                 <div class="flex items-start justify-between gap-4">
                   <div>
                     <div class="flex items-center gap-2 mb-2">
@@ -109,8 +95,8 @@
                     />
                   </a>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
         </div>
 
